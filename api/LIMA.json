@@ -1,0 +1,25 @@
+{
+  "head": {
+    "title" : "Airport Lima"
+  },
+  "header": {
+    "text": "Lima header text",
+    "logo": "/lima-logo-path",
+    "menu" : [
+      "about",
+      "contacts",
+      "home",
+      "projects",
+      "FAQ"
+    ]
+  },
+  "body" :{
+    "flightCalc": false,
+    "projects": true,
+    "footprint": true
+  },
+  "footer": {
+    "logo" : "/logo-path",
+    "links" : []
+  }
+}

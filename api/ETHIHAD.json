@@ -1,0 +1,23 @@
+{
+  "head": {
+    "title" : "Ethihad airport"
+  },
+  "header": {
+    "text": "Ethihad template header text",
+    "logo": "/ethihad-logo-path",
+    "menu" : [
+      "about",
+      "contacts",
+      "home"
+    ]
+  },
+  "body" :{
+    "flightCalc": true,
+    "projects": true,
+    "footprint": true
+  },
+  "footer": {
+    "logo" : "/ethihad-logo-path",
+    "links" : []
+  }
+}
