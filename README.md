@@ -50,26 +50,4 @@ we will not lose '/LIM' path during this redirection, because in the client side
 ## Pos and const using Next.js
 
 ## DEPLOYMENT
-
-### Deploying using docker:
-1. Run docker-compose dev:
-First you need to install all dependencies with 'npm install' or 'yarn install', without it docker command will fail
-because of `package-lock.json` or `yarn.lock` is not exist.
-After installing all dependencies you can run 
-`docker compose -f docker-compose.dev.yml build` - to build the image
-`docker compose -f docker-compose.dev.yml up` - to run your application, 
-dev environment start container with `yarn dev` command, so your application will be started on development mode,
-so you can make any changes in `./src` and `./public` folders it will affect your application because of settings
-in `docker-compose.dev.yml:services.next-app.volumes` property
-2. Run docker-compose prod:
-To start application locally use these commands:
-`docker compose -f docker-compose.prod.yml build` - to build the image
-`docker compose -f docker-compose.prod.yml up` - to run your application.    
-Unlike dev environment prod.Dockerfile will run `yarn build` command that will build your application and then run 
-node server with the command `node server.js`, so you will not be able to see any changes when updating files in `./src`
-or `./public` folders.
-3. Build the image
-If everything works fine you can build your image:
-`docker build -t carbon-click/next-js-quickstart:v.0.0.1-prod -f prod.Dockerfile .` - building the image with the tag.
-And then push this image to any image registry repository using `docker push carbon-click/next-js-quickstart:v.0.0.1-prod`
-
+### Deploying to aws ec2
