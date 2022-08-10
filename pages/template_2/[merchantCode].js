@@ -9,8 +9,9 @@ export default function MerchantPage({uiConfig}) {
         <Head>
             <title>{head?.title}</title>
         </Head>
+        <p>MerchantCode: {router.query.merchantCode}</p>
         <div>
-            <h1>Dynamic template header</h1>
+            <h1>Second template header</h1>
             <p>{header.text}</p>
             <h3>Menu</h3>
             <ul>
@@ -22,14 +23,22 @@ export default function MerchantPage({uiConfig}) {
             </ul>
         </div>
         <div>
-            <h2>Dynamic template body</h2>
-            {body.flightCalc && <p>Flight calc is displayed</p>}
-            {body.projects && <p>Projects are displayed</p>}
+            <h2>Second template body</h2>
+            {body.flightCalc && <div>
+                <h3>Flight calc is displayed</h3>
+                <p>{body.flightCalc.text}</p>
+                <p>{body.flightCalc.settings}</p>
+            </div>}
+            {body.projects && <div>
+                <h3>Projects are displayed</h3>
+                <ul>
+                    {body.projects.map((project) => (<li>{project}</li>))}
+                </ul>
+
+            </div>}
             {body.footprint && <p>Footprint is displayed</p>}
             {body.globalImpact && <p>{body.globalImpact.mainText}</p>}
         </div>
-        <p>Template: {router.query.template} </p>
-        <p>MerchantCode: {router.query.merchantCode}</p>
     </>)
 }
 

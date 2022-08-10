@@ -12,8 +12,15 @@ export default {
         ]
     },
     body :{
-        flightCalc: true,
-        projects: true,
+        flightCalc: {
+            text: 'Default flight calc text',
+            settings: 'Default flight calc settings'
+        },
+        projects: [
+            "Default project one",
+            "Default project two",
+            "Default project three"
+        ],
         footprint: true,
         globalImpact : {
             mainText: "Global impact default main text"

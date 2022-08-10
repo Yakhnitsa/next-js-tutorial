@@ -14,10 +14,14 @@
     ]
   },
   "body" :{
-    "flightCalc": null,
-    "projects": {
-
+    "flightCalc": {
+      "text": "Lima flight calculator text",
+      "settings": "Lima flight calculator settings"
     },
+    "projects": [
+      "Lima project first",
+      "Lima project second"
+    ],
     "footprint": {
 
     },
