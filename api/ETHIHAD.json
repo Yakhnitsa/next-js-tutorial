@@ -14,7 +14,8 @@
   "body" :{
     "flightCalc": true,
     "projects": true,
-    "footprint": true
+    "footprint": true,
+    "globalImpact" : null
   },
   "footer": {
     "logo" : "/ethihad-logo-path",

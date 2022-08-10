@@ -8,6 +8,7 @@ export default function Home() {
             <h3>Merchants:</h3>
             <p><Link href={'/flight-template/ETHIHAD'}><a>ETHIHAD</a></Link></p>
             <p><Link href={'/default-template/LIMA'}><a>LIMA</a></Link></p>
+            <p><Link href={'/default-template/UNKNOWN_MERCHANT'}><a>Unregistered merchant</a></Link></p>
             <p><Link href={'/about'}><a>About page</a></Link></p>
             <p></p>
         </div>

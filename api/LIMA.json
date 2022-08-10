@@ -14,9 +14,16 @@
     ]
   },
   "body" :{
-    "flightCalc": false,
-    "projects": true,
-    "footprint": true
+    "flightCalc": null,
+    "projects": {
+
+    },
+    "footprint": {
+
+    },
+    "globalImpact" : {
+      "mainText": "Lima global impact main text"
+    }
   },
   "footer": {
     "logo" : "/logo-path",
