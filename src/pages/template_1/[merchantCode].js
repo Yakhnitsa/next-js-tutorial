@@ -2,7 +2,7 @@ import {useRouter} from "next/router";
 import Head from "next/head";
 import {getUIConfigByMerchantCode} from "../../util/uiConfig/uiConfig";
 
-export default function MerchantPage({uiConfig}) {
+export default function MerchantPage({uiConfig, hostName}) {
     const router = useRouter();
     const {head, header, body, footer} = uiConfig;
     return (<>
@@ -10,6 +10,7 @@ export default function MerchantPage({uiConfig}) {
             <title>{head?.title}</title>
         </Head>
         <p>MerchantCode: {router.query.merchantCode}</p>
+        <p>Host name: <strong>{hostName}</strong></p>
         <div>
             <h1>First template header</h1>
             <p>{header.text}</p>
@@ -35,9 +36,11 @@ export default function MerchantPage({uiConfig}) {
 export async function getServerSideProps(context) {
     const merchantCode = context.query.merchantCode;
     const uiConfig = await getUIConfigByMerchantCode(merchantCode);
+    const hostName = context.req.headers.host
     return {
         props: {
-            uiConfig
+            uiConfig,
+            hostName
         }
     }
 }

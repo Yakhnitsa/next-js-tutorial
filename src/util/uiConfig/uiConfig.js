@@ -7,9 +7,6 @@ const overwriteMerge = (destinationArray, sourceArray) => {
 }
 
 export const getUIConfigByMerchantCode = async (merchantCode) => {
-
     let merchantConfig = await jsonUIConfigApi(merchantCode);
-    console.log(merchantConfig)
-
     return merge(base, merchantConfig, { arrayMerge: overwriteMerge });
 }

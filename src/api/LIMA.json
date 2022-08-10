@@ -3,7 +3,7 @@
     "title" : "Airport Lima"
   },
   "header": {
-    "text": "Lima header text",
+    "text": "Lima merchant header text",
     "logo": "/lima-logo-path",
     "menu" : [
       "about",
